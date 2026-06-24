@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-background: #050816;
+  --color-bg-secondary: #0B1120;
+  --color-primary: #00FFB3;
+  --color-secondary: #00E5FF;
+  --color-foreground: #FFFFFF;
+  --color-muted: #94A3B8;
+  --color-card: rgba(11, 17, 32, 0.7);
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base ─────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #050816;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Custom scrollbar ─────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #050816; }
+::-webkit-scrollbar-thumb { background: #00FFB3; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #00E5FF; }
+
+::selection {
+  background: rgba(0, 255, 179, 0.3);
+  color: #ffffff;
+}
+
+/* ── Layout container ─────────────────────── */
+@utility container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* ── Glass card ───────────────────────────── */
+@utility glass {
+  background: rgba(11, 17, 32, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ── Neon glows ───────────────────────────── */
+@utility neon-text-primary {
+  text-shadow:
+    0 0 7px rgba(0, 255, 179, 0.6),
+    0 0 20px rgba(0, 255, 179, 0.35),
+    0 0 40px rgba(0, 255, 179, 0.15);
+}
+@utility neon-text-secondary {
+  text-shadow:
+    0 0 7px rgba(0, 229, 255, 0.6),
+    0 0 20px rgba(0, 229, 255, 0.35),
+    0 0 40px rgba(0, 229, 255, 0.15);
+}
+@utility neon-box-primary {
+  box-shadow:
+    0 0 15px rgba(0, 255, 179, 0.25),
+    inset 0 0 15px rgba(0, 255, 179, 0.06);
+}
+@utility neon-box-secondary {
+  box-shadow:
+    0 0 15px rgba(0, 229, 255, 0.25),
+    inset 0 0 15px rgba(0, 229, 255, 0.06);
+}
+
+/* ── Animated gradient border (for cards) ── */
+@utility glow-border-primary {
+  position: relative;
+}
+
+/* ── Scan-line overlay ────────────────────── */
+@utility scanlines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 179, 0.015) 2px,
+    rgba(0, 255, 179, 0.015) 4px
+  );
+  pointer-events: none;
 }
