@@ -13,26 +13,17 @@ const projects = [
       "A modern application for displaying prayer times with clean UI and responsive design. Features accurate calculation methods and localization.",
     tech: ["HTML", "CSS", "JavaScript", "React"],
     github: "#",
-    demo: "https://masjiidtime.netlify.app/?fbclid=IwY2xjawSoVDxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR5dBU5iDc7G6wg3xMIN6NAd-adXyrFseVUjF_yNmdruHnJNjmXwKr59jAizIQ_aem_FEvoI3xfqUc-Cq5w1BWevA",
+    demo: "https://prayer-times-theta.vercel.app/",
     accent: "#00FFB3",
   },
   {
-    title: "Palestine Extension",
+    title: "Kofya",
     description:
-      "A browser extension created to support and spread awareness through accessible frontend experiences. Provides daily facts and historical context.",
+      "A web application and extension created to support and spread awareness through accessible frontend experiences. Provides daily facts and historical context.",
     tech: ["JavaScript", "React", "Browser API"],
     github: "#",
-    demo: "https://kofya.netlify.app/",
+    demo: "https://kofya.vercel.app/",
     accent: "#00E5FF",
-  },
-  {
-    title: "USMLE Platform",
-    description:
-      "A modern educational platform designed with responsive frontend architecture and user-friendly experience for medical students.",
-    tech: ["React", "Next.js", "Tailwind CSS"],
-    github: "#",
-    demo: "https://usmlegenuis-qb.runasp.net/",
-    accent: "#00FFB3",
   },
   {
     title: "Saleh Org",
@@ -41,16 +32,34 @@ const projects = [
     tech: ["React", "Tailwind CSS"],
     github: "#",
     demo: "https://saleh-org.vercel.app/",
+    accent: "#00FFB3",
+  },
+  {
+    title: "Nour Elrahamat",
+    description:
+      "A humanitarian charity platform dedicated to community relief, clean water initiatives, and educational support with seamless online giving.",
+    tech: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    github: "#",
+    demo: "https://noorelrahmaplatform-main.vercel.app/en",
     accent: "#00E5FF",
   },
   {
-    title: "Secure Attendance",
+    title: "Kora Egypt",
     description:
-      "An advanced attendance tracking application featuring secure user authentication and a clean, user-friendly interface.",
-    tech: ["Next.js", "Tailwind CSS"],
+      "A sports news and live match coverage platform delivering real-time football scores, match schedules, and league updates across Egypt and worldwide.",
+    tech: ["React", "Next.js", "Tailwind CSS", "REST API"],
     github: "#",
-    demo: "https://secure-attendance.vercel.app/login",
+    demo: "https://www.koraegypt.com/",
     accent: "#00FFB3",
+  },
+  {
+    title: "Lamasat Fanyaa",
+    description:
+      "A showcase platform for artistic woodworking and fine carpentry crafts, presenting bespoke furniture collections and custom interior designs.",
+    tech: ["React", "CSS3", "JavaScript", "Responsive UI"],
+    github: "#",
+    demo: "https://lamasatfanyaa.com/",
+    accent: "#00E5FF",
   },
 ];
 
